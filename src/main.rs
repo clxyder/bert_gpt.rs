@@ -10,16 +10,16 @@ use stopwatch::Stopwatch;
 fn main() {
     println!("Hello, world!");
     let model_resource = Box::new(RemoteResource::from_pretrained(
-        GptNeoModelResources::GPT_NEO_125M, // GPT_NEO_2_7B
+        GptNeoModelResources::GPT_NEO_125M, // GPT_NEO_1_3B, GPT_NEO_2_7B
     ));
     let config_resource = Box::new(RemoteResource::from_pretrained(
-        GptNeoConfigResources::GPT_NEO_125M, // GPT_NEO_2_7B
+        GptNeoConfigResources::GPT_NEO_125M, // GPT_NEO_1_3B, GPT_NEO_2_7B
     ));
     let vocab_resource = Box::new(RemoteResource::from_pretrained(
-        GptNeoVocabResources::GPT_NEO_125M, // GPT_NEO_2_7B
+        GptNeoVocabResources::GPT_NEO_125M, // GPT_NEO_1_3B, GPT_NEO_2_7B
     ));
     let merges_resource = Box::new(RemoteResource::from_pretrained(
-        GptNeoMergesResources::GPT_NEO_125M, // GPT_NEO_2_7B
+        GptNeoMergesResources::GPT_NEO_125M, // GPT_NEO_1_3B, GPT_NEO_2_7B
     ));
 
     let generate_config = TextGenerationConfig {
