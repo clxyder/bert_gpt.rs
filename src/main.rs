@@ -10,16 +10,16 @@ use stopwatch::Stopwatch;
 fn main() {
     println!("Hello, world!");
     let model_resource = Box::new(RemoteResource::from_pretrained(
-        GptNeoModelResources::GPT_NEO_125M,
+        GptNeoModelResources::GPT_NEO_125M, // GPT_NEO_2_7B
     ));
     let config_resource = Box::new(RemoteResource::from_pretrained(
-        GptNeoConfigResources::GPT_NEO_125M,
+        GptNeoConfigResources::GPT_NEO_125M, // GPT_NEO_2_7B
     ));
     let vocab_resource = Box::new(RemoteResource::from_pretrained(
-        GptNeoVocabResources::GPT_NEO_125M,
+        GptNeoVocabResources::GPT_NEO_125M, // GPT_NEO_2_7B
     ));
     let merges_resource = Box::new(RemoteResource::from_pretrained(
-        GptNeoMergesResources::GPT_NEO_125M,
+        GptNeoMergesResources::GPT_NEO_125M, // GPT_NEO_2_7B
     ));
 
     let generate_config = TextGenerationConfig {
@@ -31,7 +31,7 @@ fn main() {
         num_beams: 5,
         no_repeat_ngram_size: 2,
         max_length: 200,
-        // device: tch::Device::Cpu,
+        // device: tch::Device::Cpu, // uncomment if you want to only use your CPU
         ..Default::default()
     };
 
