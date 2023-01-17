@@ -8,9 +8,12 @@ The project was originally inspired from [here](https://github.com/Me163/youtube
 
 ## Execution
 
-Run the following line:
+Run the following lines:
 
-`export LD_LIBRARY_PATH="$LIBTORCH/lib${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"`
+```
+export LIBTORCH="/usr/local/lib/libtorch"
+export LD_LIBRARY_PATH="$LIBTORCH/lib${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+```
 
 Then, run the following:
 
